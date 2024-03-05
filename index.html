@@ -9,8 +9,8 @@
   </head>
 
   <body>
-    <div class="nav">
-      <img class="nav__logo" src="img/net-logo.png"/>
+    <div class="nav" id="nav">
+      <img class="nav__logo" src="img/net-logo1.png"/>
       <img class="nav__avatar" src="img/netflix-avatar.png"/>
     </div>
 
@@ -84,5 +84,16 @@
         <img class="row__poster" src="img/small-movie8.jpg"/>
       </div>
     </div>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', ()=>{
+          if(window.scrollY >= 100){
+            nav.classList.add('nav__black');
+          } else {
+            nav.classList.remove('nav__black');
+          }
+      })
+    </script>
   </body>
 </html>
